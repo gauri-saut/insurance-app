@@ -34,15 +34,15 @@ const Header = () => {
 
           {activeDropdown === 'insure' && (
             <div className="absolute left-0 top-full bg-white shadow-lg mt-2 rounded-lg z-50">
-              <Link to='/Health-Insurance'><div className="px-4 py-2 text-black hover:bg-gray-200">Health Insurance</div></Link>
-              <Link to='/Motor'><div className="px-4 py-2 text-black hover:bg-gray-200">Motor Insurance</div></Link>
+              <Link to='/ihealth'><div className="px-4 py-2 text-black hover:bg-gray-200">Health Insurance</div></Link>
+              <Link to='/imotor'><div className="px-4 py-2 text-black hover:bg-gray-200">Motor Insurance</div></Link>
             </div>
           )}
 
           <Link to='/Renew'><div>Renew</div></Link>
           <Link to='/Claim'><div>Claim</div></Link>
-          <Link to='/Government-Schemes'><div>Government Schemes</div></Link>
-          <Link to='/Insurance-Samjho'><div>Insurance Samjho</div></Link>
+          <Link to='/Government'><div>Government Schemes</div></Link>
+          <Link to='/insanjo'><div>Insurance Samjho</div></Link>
         </div>
 
         <div className="flex space-x-4 items-center">
