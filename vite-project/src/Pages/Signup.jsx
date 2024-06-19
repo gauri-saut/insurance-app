@@ -46,6 +46,15 @@ const Signup = () => {
               placeholder="Enter your password"
             />
           </div>
+          <div className="mb-4 text-center">
+            <button
+              type="button"
+              className="text-blue-500 hover:underline focus:outline-none"
+              onClick={() => alert('Forgot Password clicked')}
+            >
+              Forgot Password?
+            </button>
+          </div>
           <div className="flex justify-center">
             <button
               type="submit"
