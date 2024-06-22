@@ -1,12 +1,21 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const handleDropdown = (dropdown) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
+
+
+
+  const [renew, setRenew] = useState(false);
+
+  const [claim, setClaim]= useState(false);
+
+
 
   return (
     <div>
@@ -39,8 +48,41 @@ const Header = () => {
             </div>
           )}
 
-          <Link to='/Renew'><div>Renew</div></Link>
-          <Link to='/Claim'><div>Claim</div></Link>
+{/* for renue navigation */}
+<div>
+
+          <Link to='/Renew'><button onClick={()=> setRenew(!renew)}><div>Renew</div> </button></Link>
+</div>
+
+{ renew && (
+    <div className="absolute left-0 top-full bg-white shadow-lg mt-2 rounded-lg z-50">
+    <Link to='/ihealth'><div className="px-4 py-2 text-black hover:bg-gray-200">Health Renew</div></Link>
+    <Link to='/imotor'><div className="px-4 py-2 text-black hover:bg-gray-200">Motor Renew</div></Link>
+  </div>
+)
+}
+
+
+{/* for claim navigation */}
+
+<div>
+
+          <Link to='/Claim'> <button onClick={()=> setClaim(!claim)}><div>Claim</div></button></Link>
+</div>
+
+{
+  claim &&(
+    <div className="absolute left-0 top-full bg-white shadow-lg mt-2 rounded-lg z-50">
+    <Link to='/ihealth'><div className="px-4 py-2 text-black hover:bg-gray-200">Health Claim</div></Link>
+    <Link to='/imotor'><div className="px-4 py-2 text-black hover:bg-gray-200">Motor Claim</div></Link>
+  </div>
+
+  )
+}
+
+
+
+
           <Link to='/Government'><div>Government Schemes</div></Link>
           <Link to='/insanjo'><div>Insurance Samjho</div></Link>
         </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Carddata } from '../Config/Db'; 
 
 const Card = () => {

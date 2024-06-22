@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 function About() {
   const [formData, setFormData] = useState({
@@ -17,7 +17,6 @@ function About() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission logic here
     console.log('Form data submitted:', formData);
     alert('Thank you for your message!');
     setFormData({
